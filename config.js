@@ -1,7 +1,7 @@
 export default {
 	app: {
 		name: "EduDomain",
-		url: "http://localhost:8060",
+		url: "https://edudomainapi-production.up.railway.app/",
 		frontendUrl: "http://localhost:8050",
 		secret: "fa0e57bce90f3400841d1f8e9b42ac81",
 		language: "english",
