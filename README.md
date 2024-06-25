@@ -1,6 +1,6 @@
-# Getting Started with Project API
+# Getting Started with EduDomain API
 
-### Generated with [RadSystems](https://radsystems.io)
+
 
 ## Project Structure
 
@@ -42,6 +42,3 @@
 [nodemailer](https://nodemailer.com/about/) Send mails
 
 [passport](https://www.passportjs.org/) For user authentication
-
-### For more info
-See [RadSystems](https://radsystems.io/)
