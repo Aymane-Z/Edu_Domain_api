@@ -1,0 +1,46 @@
+
+<div id="report-title"><h1>Pavillondetails</h1></div>
+<table className="table table-sm table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Code</th>
+            <th>Type</th>
+            <th>Denomination</th>
+            <th>Description</th>
+            <th>Nombre Niveaux</th>
+            <th>Nombre Entrees</th>
+            <th>Dt Mise Service</th>
+            <th>Id Batiment</th>
+            <th>B Denomination</th>
+            <th>Id Residence</th>
+            <th>R Denomination</th>
+            <th>Id Responsable</th>
+            <th>Id Proprietaire</th>
+            <th>P Denomination</th>
+            <th>Nom Prenom</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% records.forEach(function(record){ %>
+        <tr>
+            <td><%= record.id %></td>
+            <td><%= record.code %></td>
+            <td><%= record.type %></td>
+            <td><%= record.denomination %></td>
+            <td><%= record.description %></td>
+            <td><%= record.nombre_niveaux %></td>
+            <td><%= record.nombre_entrees %></td>
+            <td><%= record.dt_mise_service %></td>
+            <td><%= record.id_batiment %></td>
+            <td><%= record.b_denomination %></td>
+            <td><%= record.id_residence %></td>
+            <td><%= record.r_denomination %></td>
+            <td><%= record.id_responsable %></td>
+            <td><%= record.id_proprietaire %></td>
+            <td><%= record.p_denomination %></td>
+            <td><%= record.nom_prenom %></td>
+        </tr>
+        <% }); %>
+    </tbody>
+</table>

@@ -1,0 +1,66 @@
+
+<div id="report-title"><h1>Unitelocationdetails</h1></div>
+<table className="table table-sm table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Code</th>
+            <th>Designation</th>
+            <th>Type</th>
+            <th>Description</th>
+            <th>Etat Physique</th>
+            <th>Observation</th>
+            <th>Id Chambre</th>
+            <th>Id Typechambre</th>
+            <th>Id Couloir</th>
+            <th>Id Pavillon</th>
+            <th>Id Batiment</th>
+            <th>Id Residence</th>
+            <th>Id Responsable</th>
+            <th>Id Proprietaire</th>
+            <th>Etatunite Id</th>
+            <th>Etatunite Etat</th>
+            <th>Etatunite Description</th>
+            <th>Etatunite Observation</th>
+            <th>Etatunite Dt Debut Etat</th>
+            <th>Etatunite Dt Fin Etat</th>
+            <th>Etatunite Ouvert Location</th>
+            <th>Etatunite Id Unitelocation</th>
+            <th>Etatunite Date Created</th>
+            <th>Etatunite Date Updated</th>
+            <th>Familleunite Photo</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% records.forEach(function(record){ %>
+        <tr>
+            <td><%= record.id %></td>
+            <td><%= record.code %></td>
+            <td><%= record.designation %></td>
+            <td><%= record.type %></td>
+            <td><%= record.description %></td>
+            <td><%= record.etat_physique %></td>
+            <td><%= record.observation %></td>
+            <td><%= record.id_chambre %></td>
+            <td><%= record.id_typechambre %></td>
+            <td><%= record.id_couloir %></td>
+            <td><%= record.id_pavillon %></td>
+            <td><%= record.id_batiment %></td>
+            <td><%= record.id_residence %></td>
+            <td><%= record.id_responsable %></td>
+            <td><%= record.id_proprietaire %></td>
+            <td><%= record.etatunite_id %></td>
+            <td><%= record.etatunite_etat %></td>
+            <td><%= record.etatunite_description %></td>
+            <td><%= record.etatunite_observation %></td>
+            <td><%= record.etatunite_dt_debut_etat %></td>
+            <td><%= record.etatunite_dt_fin_etat %></td>
+            <td><%= record.etatunite_ouvert_location %></td>
+            <td><%= record.etatunite_id_unitelocation %></td>
+            <td><%= record.etatunite_date_created %></td>
+            <td><%= record.etatunite_date_updated %></td>
+            <td><%= record.familleunite_photo %></td>
+        </tr>
+        <% }); %>
+    </tbody>
+</table>

@@ -1,0 +1,36 @@
+
+<div id="report-title"><h1>Base Tarification</h1></div>
+<table className="table table-sm table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Code</th>
+            <th>Designation</th>
+            <th>Dt Application</th>
+            <th>Periodicite</th>
+            <th>Montant</th>
+            <th>Date Created</th>
+            <th>Date Updated</th>
+            <th>Dt Fin</th>
+            <th>Id Residence</th>
+            <th>Id Type Chambre</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% records.forEach(function(record){ %>
+        <tr>
+            <td><%= record.id %></td>
+            <td><%= record.code %></td>
+            <td><%= record.designation %></td>
+            <td><%= record.dt_application %></td>
+            <td><%= record.periodicite %></td>
+            <td><%= record.montant %></td>
+            <td><%= record.date_created %></td>
+            <td><%= record.date_updated %></td>
+            <td><%= record.dt_fin %></td>
+            <td><%= record.id_residence %></td>
+            <td><%= record.id_type_chambre %></td>
+        </tr>
+        <% }); %>
+    </tbody>
+</table>

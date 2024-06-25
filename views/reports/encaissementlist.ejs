@@ -1,0 +1,36 @@
+
+<div id="report-title"><h1>Encaissement</h1></div>
+<table className="table table-sm table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Date</th>
+            <th>Montant</th>
+            <th>Observation</th>
+            <th>Id Client</th>
+            <th>User Id</th>
+            <th>Id Facture</th>
+            <th>Id Unite Location</th>
+            <th>Date Created</th>
+            <th>Date Updated</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% records.forEach(function(record){ %>
+        <tr>
+            <td><%= record.id %></td>
+            <td><%= record.date %></td>
+            <td><%= record.montant %></td>
+            <td><%= record.observation %></td>
+            <td><%= record.id_client %></td>
+            <td><%= record.user_id %></td>
+            <td><%= record.id_facture %></td>
+            <td><%= record.id_unite_location %></td>
+            <td><%= record.date_created %></td>
+            <td><%= record.date_updated %></td>
+            <td><%= record.status %></td>
+        </tr>
+        <% }); %>
+    </tbody>
+</table>

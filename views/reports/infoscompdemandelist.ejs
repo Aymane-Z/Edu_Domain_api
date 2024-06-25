@@ -1,0 +1,40 @@
+
+<div id="report-title"><h1>Infos Comp Demande</h1></div>
+<table className="table table-sm table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Id Demande Logement</th>
+            <th>Ancienne Cite</th>
+            <th>Periode Ancienne Cite</th>
+            <th>Source Decouverte</th>
+            <th>Annee Residence Precedente</th>
+            <th>Type Chambre</th>
+            <th>Numero Chambre</th>
+            <th>Groupe Sanguin</th>
+            <th>Maladies Allergies</th>
+            <th>Nom Contact Personne</th>
+            <th>Tel Contact Personne</th>
+            <th>Date</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% records.forEach(function(record){ %>
+        <tr>
+            <td><%= record.id %></td>
+            <td><%= record.id_demande_logement %></td>
+            <td><%= record.ancienne_cite %></td>
+            <td><%= record.periode_ancienne_cite %></td>
+            <td><%= record.source_decouverte %></td>
+            <td><%= record.annee_residence_precedente %></td>
+            <td><%= record.type_chambre %></td>
+            <td><%= record.numero_chambre %></td>
+            <td><%= record.groupe_sanguin %></td>
+            <td><%= record.maladies_allergies %></td>
+            <td><%= record.nom_contact_personne %></td>
+            <td><%= record.tel_contact_personne %></td>
+            <td><%= record.date %></td>
+        </tr>
+        <% }); %>
+    </tbody>
+</table>

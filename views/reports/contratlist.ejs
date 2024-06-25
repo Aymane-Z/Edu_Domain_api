@@ -1,0 +1,30 @@
+
+<div id="report-title"><h1>Contrat</h1></div>
+<table className="table table-sm table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Ref Contrat</th>
+            <th>Date</th>
+            <th>Observation</th>
+            <th>Remise</th>
+            <th>Franchize</th>
+            <th>Date Created</th>
+            <th>Date Updated</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% records.forEach(function(record){ %>
+        <tr>
+            <td><%= record.id %></td>
+            <td><%= record.ref_contrat %></td>
+            <td><%= record.date %></td>
+            <td><%= record.observation %></td>
+            <td><%= record.remise %></td>
+            <td><%= record.franchize %></td>
+            <td><%= record.date_created %></td>
+            <td><%= record.date_updated %></td>
+        </tr>
+        <% }); %>
+    </tbody>
+</table>

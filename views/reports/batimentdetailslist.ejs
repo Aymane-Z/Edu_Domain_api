@@ -1,0 +1,40 @@
+
+<div id="report-title"><h1>Batimentdetails</h1></div>
+<table className="table table-sm table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Code</th>
+            <th>Type</th>
+            <th>Denomination</th>
+            <th>Description</th>
+            <th>Nombre Niveaux</th>
+            <th>Nombre</th>
+            <th>Id Residence</th>
+            <th>Res Denomination</th>
+            <th>Id Responsable</th>
+            <th>Id Proprietaire</th>
+            <th>Nom Prenom</th>
+            <th>Prop Denomination</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% records.forEach(function(record){ %>
+        <tr>
+            <td><%= record.id %></td>
+            <td><%= record.code %></td>
+            <td><%= record.type %></td>
+            <td><%= record.denomination %></td>
+            <td><%= record.description %></td>
+            <td><%= record.nombre_niveaux %></td>
+            <td><%= record.nombre %></td>
+            <td><%= record.id_residence %></td>
+            <td><%= record.res_denomination %></td>
+            <td><%= record.id_responsable %></td>
+            <td><%= record.id_proprietaire %></td>
+            <td><%= record.nom_prenom %></td>
+            <td><%= record.prop_denomination %></td>
+        </tr>
+        <% }); %>
+    </tbody>
+</table>

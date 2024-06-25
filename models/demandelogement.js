@@ -1,0 +1,322 @@
+
+import { BaseModel, sequelize, Sequelize } from "./basemodel.js";
+
+class DemandeLogement extends BaseModel {
+	static init() {
+		return super.init(
+			{
+				
+				id: { type: Sequelize.INTEGER, primaryKey: true, autoIncrement: true },
+				nom: { type:Sequelize.STRING   },
+				prenom: { type:Sequelize.STRING   },
+				cin_client: { type:Sequelize.STRING   },
+				date_naissance: { type:Sequelize.DATEONLY  ,defaultValue: Sequelize.literal('DEFAULT') },
+				lieu_naissance: { type:Sequelize.STRING   },
+				situation_familiale: { type:Sequelize.STRING   },
+				adresse_client: { type:Sequelize.STRING   },
+				code_postal_client: { type:Sequelize.STRING   },
+				ville_client: { type:Sequelize.STRING   },
+				pays_client: { type:Sequelize.STRING   },
+				tel_1_client: { type:Sequelize.STRING   },
+				tel_2_client: { type:Sequelize.STRING   },
+				email_client: { type:Sequelize.STRING   },
+				etablissement: { type:Sequelize.STRING   },
+				cycle_etudes: { type:Sequelize.STRING   },
+				nom_garant: { type:Sequelize.STRING   },
+				prenom_garant: { type:Sequelize.STRING   },
+				cin_garant: { type:Sequelize.STRING   },
+				date_naissance_garant: { type:Sequelize.DATEONLY  ,defaultValue: Sequelize.literal('DEFAULT') },
+				lieu_naissance_garant: { type:Sequelize.DATEONLY  ,defaultValue: Sequelize.literal('DEFAULT') },
+				situation_familiale_garant: { type:Sequelize.STRING   },
+				lien_garant_client: { type:Sequelize.STRING   },
+				adresse_garant: { type:Sequelize.STRING   },
+				code_postal_garant: { type:Sequelize.STRING   },
+				ville_garant: { type:Sequelize.STRING   },
+				pays_garant: { type:Sequelize.STRING   },
+				tel1_garant: { type:Sequelize.STRING   },
+				tel2_garant: { type:Sequelize.STRING   },
+				email_garant: { type:Sequelize.STRING   },
+				profession: { type:Sequelize.STRING   },
+				tel_bureau: { type:Sequelize.STRING   },
+				fax: { type:Sequelize.STRING   },
+				revenus_mensuels: { type:Sequelize.INTEGER  ,defaultValue: Sequelize.literal('DEFAULT') },
+				id_unite_location: { type:Sequelize.INTEGER  ,defaultValue: Sequelize.literal('DEFAULT') },
+				etat_demande: { type:Sequelize.STRING   },
+				code_demande: { type:Sequelize.STRING   },
+				id_dossier: { type:Sequelize.INTEGER  ,defaultValue: Sequelize.literal('DEFAULT') },
+				id_user: { type:Sequelize.INTEGER  ,defaultValue: Sequelize.literal('DEFAULT') },
+				id_client: { type:Sequelize.INTEGER  ,defaultValue: Sequelize.literal('DEFAULT') },
+				id_garant: { type:Sequelize.INTEGER  ,defaultValue: Sequelize.literal('DEFAULT') },
+				type_chambre: { type:Sequelize.STRING   },
+				binome_souhaite: { type:Sequelize.STRING   },
+				cin_binome: { type:Sequelize.STRING   },
+				date_created: { type:Sequelize.DATE   },
+				date_updated: { type:Sequelize.DATE   },
+				id_type_chambre: { type:Sequelize.INTEGER   },
+				id_residence: { type:Sequelize.INTEGER   }
+			}, 
+			{ 
+				sequelize,
+				
+				tableName: "demande_logement",
+				modelName: "demande_logement",timestamps:true,
+				createdAt: 'date_updated',updatedAt: 'date_created',
+				
+			}
+		);
+	}
+	
+	static listFields() {
+		return [
+			'code_demande', 
+			'nom', 
+			'prenom', 
+			'cin_client', 
+			'pays_client', 
+			'tel_1_client', 
+			'email_client', 
+			'etat_demande', 
+			'id_type_chambre', 
+			'type_chambre',
+			'id', 
+			'id_user', 
+			'id_residence'
+		];
+	}
+
+	static exportListFields() {
+		return [
+			'code_demande', 
+			'nom', 
+			'prenom', 
+			'cin_client', 
+			'pays_client', 
+			'tel_1_client', 
+			'email_client', 
+			'etat_demande', 
+			'id_type_chambre', 
+			'id', 
+			'id_user', 
+			'id_residence'
+		];
+	}
+
+	static viewFields() {
+		return [
+			'code_demande', 
+			'etat_demande', 
+			'nom', 
+			'prenom', 
+			'cin_client', 
+			'date_naissance', 
+			'lieu_naissance', 
+			'situation_familiale', 
+			'adresse_client', 
+			'code_postal_client', 
+			'ville_client', 
+			'pays_client', 
+			'tel_1_client', 
+			'tel_2_client', 
+			'email_client', 
+			'etablissement', 
+			'cycle_etudes', 
+			'nom_garant', 
+			'prenom_garant', 
+			'cin_garant', 
+			'date_naissance_garant', 
+			'lieu_naissance_garant', 
+			'situation_familiale_garant', 
+			'lien_garant_client', 
+			'adresse_garant', 
+			'code_postal_garant', 
+			'ville_garant', 
+			'pays_garant', 
+			'tel1_garant', 
+			'tel2_garant', 
+			'email_garant', 
+			'profession', 
+			'tel_bureau', 
+			'fax', 
+			'revenus_mensuels', 
+			Sequelize.literal('`unite_location`.`code` AS `unitelocation_code`'), 
+			'id_unite_location', 
+			'type_chambre', 
+			'binome_souhaite', 
+			'cin_binome', 
+			'id_dossier', 
+			'id_user', 
+			'id_client', 
+			'id_garant', 
+			'date_created', 
+			'date_updated', 
+			'id_type_chambre', 
+			'id', 
+			'id_residence'
+		];
+	}
+
+	static exportViewFields() {
+		return [
+			'code_demande', 
+			'etat_demande', 
+			'nom', 
+			'prenom', 
+			'cin_client', 
+			'date_naissance', 
+			'lieu_naissance', 
+			'situation_familiale', 
+			'adresse_client', 
+			'code_postal_client', 
+			'ville_client', 
+			'pays_client', 
+			'tel_1_client', 
+			'tel_2_client', 
+			'email_client', 
+			'etablissement', 
+			'cycle_etudes', 
+			'nom_garant', 
+			'prenom_garant', 
+			'cin_garant', 
+			'date_naissance_garant', 
+			'lieu_naissance_garant', 
+			'situation_familiale_garant', 
+			'lien_garant_client', 
+			'adresse_garant', 
+			'code_postal_garant', 
+			'ville_garant', 
+			'pays_garant', 
+			'tel1_garant', 
+			'tel2_garant', 
+			'email_garant', 
+			'profession', 
+			'tel_bureau', 
+			'fax', 
+			'revenus_mensuels', 
+			Sequelize.literal('`unite_location`.`code` AS `unitelocation_code`'), 
+			'id_unite_location', 
+			'type_chambre', 
+			'binome_souhaite', 
+			'cin_binome', 
+			'id_dossier', 
+			'id_user', 
+			'id_client', 
+			'id_garant', 
+			'date_created', 
+			'date_updated', 
+			'id_type_chambre', 
+			'id', 
+			'id_residence'
+		];
+	}
+
+	static editFields() {
+		return [
+			'nom', 
+			'prenom', 
+			'cin_client', 
+			'date_naissance', 
+			'lieu_naissance', 
+			'situation_familiale', 
+			'adresse_client', 
+			'code_postal_client', 
+			'ville_client', 
+			'pays_client', 
+			'tel_1_client', 
+			'tel_2_client', 
+			'email_client', 
+			'etablissement', 
+			'cycle_etudes', 
+			'nom_garant', 
+			'prenom_garant', 
+			'cin_garant', 
+			'date_naissance_garant', 
+			'lieu_naissance_garant', 
+			'situation_familiale_garant', 
+			'lien_garant_client', 
+			'adresse_garant', 
+			'code_postal_garant', 
+			'ville_garant', 
+			'pays_garant', 
+			'tel1_garant', 
+			'tel2_garant', 
+			'email_garant', 
+			'profession', 
+			'tel_bureau', 
+			'fax', 
+			'revenus_mensuels', 
+			'id_type_chambre', 
+			'binome_souhaite', 
+			'cin_binome', 
+			'code_demande', 
+			'etat_demande', 
+			'id_unite_location', 
+			'id_dossier', 
+			'id_client', 
+			'id_garant', 
+			'id', 
+			'id_residence'
+		];
+	}
+
+	static vuedemandeFields() {
+		return [
+			'code_demande', 
+			'nom', 
+			'prenom', 
+			'cin_client', 
+			'pays_client', 
+			'email_client', 
+			'tel_1_client', 
+			'id', 
+			'id_user', 
+			'id_residence',
+			'id_client'
+		];
+	}
+
+	
+	static searchFields(){
+		return [
+			Sequelize.literal("code_demande LIKE :search"), 
+			Sequelize.literal("nom LIKE :search"), 
+			Sequelize.literal("prenom LIKE :search"), 
+			Sequelize.literal("cin_client LIKE :search"), 
+			Sequelize.literal("pays_client LIKE :search"), 
+			Sequelize.literal("tel_1_client LIKE :search"), 
+			Sequelize.literal("email_client LIKE :search"), 
+			Sequelize.literal("etat_demande LIKE :search"), 
+			Sequelize.literal("id LIKE :search"), 
+			Sequelize.literal("lieu_naissance LIKE :search"), 
+			Sequelize.literal("situation_familiale LIKE :search"), 
+			Sequelize.literal("adresse_client LIKE :search"), 
+			Sequelize.literal("code_postal_client LIKE :search"), 
+			Sequelize.literal("ville_client LIKE :search"), 
+			Sequelize.literal("tel_2_client LIKE :search"), 
+			Sequelize.literal("etablissement LIKE :search"), 
+			Sequelize.literal("cycle_etudes LIKE :search"), 
+			Sequelize.literal("nom_garant LIKE :search"), 
+			Sequelize.literal("prenom_garant LIKE :search"), 
+			Sequelize.literal("cin_garant LIKE :search"), 
+			Sequelize.literal("situation_familiale_garant LIKE :search"), 
+			Sequelize.literal("lien_garant_client LIKE :search"), 
+			Sequelize.literal("adresse_garant LIKE :search"), 
+			Sequelize.literal("code_postal_garant LIKE :search"), 
+			Sequelize.literal("ville_garant LIKE :search"), 
+			Sequelize.literal("pays_garant LIKE :search"), 
+			Sequelize.literal("tel1_garant LIKE :search"), 
+			Sequelize.literal("tel2_garant LIKE :search"), 
+			Sequelize.literal("email_garant LIKE :search"), 
+			Sequelize.literal("profession LIKE :search"), 
+			Sequelize.literal("tel_bureau LIKE :search"), 
+			Sequelize.literal("fax LIKE :search"), 
+			Sequelize.literal("type_chambre LIKE :search"), 
+			Sequelize.literal("binome_souhaite LIKE :search"), 
+			Sequelize.literal("cin_binome LIKE :search"),
+		];
+	}
+
+	
+	
+}
+DemandeLogement.init();
+export default DemandeLogement;

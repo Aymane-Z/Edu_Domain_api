@@ -1,0 +1,60 @@
+
+<div id="report-title"><h1>Unite Location</h1></div>
+<table className="table table-sm table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Code</th>
+            <th>Designation</th>
+            <th>Type</th>
+            <th>Description</th>
+            <th>Etat Physique</th>
+            <th>Observation</th>
+            <th>Id Chambre</th>
+            <th>Photo</th>
+            <th>Freerentalunits Id</th>
+            <th>Freerentalunits Code</th>
+            <th>Freerentalunits Designation</th>
+            <th>Freerentalunits Typeunit</th>
+            <th>Freerentalunits Description</th>
+            <th>Freerentalunits Etat Physique</th>
+            <th>Freerentalunits Observation</th>
+            <th>Freerentalunits Id Residence</th>
+            <th>Freerentalunits Etat</th>
+            <th>Freerentalunits Type</th>
+            <th>Freerentalunits Id Typech</th>
+            <th>Freerentalunits Prix</th>
+            <th>Freerentalunits Photo</th>
+            <th>Freerentalunits Categoriechambre</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% records.forEach(function(record){ %>
+        <tr>
+            <td><%= record.id %></td>
+            <td><%= record.code %></td>
+            <td><%= record.designation %></td>
+            <td><%= record.type %></td>
+            <td><%= record.description %></td>
+            <td><%= record.etat_physique %></td>
+            <td><%= record.observation %></td>
+            <td><%= record.id_chambre %></td>
+            <td><%= record.photo %></td>
+            <td><%= record.freerentalunits_id %></td>
+            <td><%= record.freerentalunits_code %></td>
+            <td><%= record.freerentalunits_designation %></td>
+            <td><%= record.freerentalunits_typeunit %></td>
+            <td><%= record.freerentalunits_description %></td>
+            <td><%= record.freerentalunits_etat_physique %></td>
+            <td><%= record.freerentalunits_observation %></td>
+            <td><%= record.freerentalunits_id_residence %></td>
+            <td><%= record.freerentalunits_etat %></td>
+            <td><%= record.freerentalunits_type %></td>
+            <td><%= record.freerentalunits_id_typech %></td>
+            <td><%= record.freerentalunits_prix %></td>
+            <td><%= record.freerentalunits_photo %></td>
+            <td><%= record.freerentalunits_categoriechambre %></td>
+        </tr>
+        <% }); %>
+    </tbody>
+</table>

@@ -1,0 +1,32 @@
+
+<div id="report-title"><h1>Etage</h1></div>
+<table className="table table-sm table-striped">
+    <thead>
+        <tr>
+            <th>Code</th>
+            <th>Denomination</th>
+            <th>Description</th>
+            <th>Nombre de Chambres</th>
+            <th>Acces Handicape</th>
+            <th>Amenagements Speciaux</th>
+            <th>Id Pavillon</th>
+            <th>Date Created</th>
+            <th>Date Updated</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% records.forEach(function(record){ %>
+        <tr>
+            <td><%= record.code %></td>
+            <td><%= record.denomination %></td>
+            <td><%= record.description %></td>
+            <td><%= record.nombre_chambres %></td>
+            <td><%= record.acces_handicape %></td>
+            <td><%= record.amenagements_speciaux %></td>
+            <td><%= record.id_pavillon %></td>
+            <td><%= record.date_created %></td>
+            <td><%= record.date_updated %></td>
+        </tr>
+        <% }); %>
+    </tbody>
+</table>

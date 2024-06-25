@@ -1,0 +1,18 @@
+
+<div id="report-title"><h1>Roles</h1></div>
+<table className="table table-sm table-striped">
+    <thead>
+        <tr>
+            <th>Role Id</th>
+            <th>Role Name</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% records.forEach(function(record){ %>
+        <tr>
+            <td><%= record.role_id %></td>
+            <td><%= record.role_name %></td>
+        </tr>
+        <% }); %>
+    </tbody>
+</table>

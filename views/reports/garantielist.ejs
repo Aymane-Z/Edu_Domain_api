@@ -1,0 +1,24 @@
+
+<div id="report-title"><h1>Garantie</h1></div>
+<table className="table table-sm table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Id Garant</th>
+            <th>Id Client</th>
+            <th>Date Created</th>
+            <th>Date Updated</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% records.forEach(function(record){ %>
+        <tr>
+            <td><%= record.id %></td>
+            <td><%= record.id_garant %></td>
+            <td><%= record.id_client %></td>
+            <td><%= record.date_created %></td>
+            <td><%= record.date_updated %></td>
+        </tr>
+        <% }); %>
+    </tbody>
+</table>

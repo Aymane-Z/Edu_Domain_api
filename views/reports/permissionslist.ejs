@@ -1,0 +1,24 @@
+
+<div id="report-title"><h1>Permissions</h1></div>
+<table className="table table-sm table-striped">
+    <thead>
+        <tr>
+            <th>Permission Id</th>
+            <th>Role Id</th>
+            <th>Page Name</th>
+            <th>Action Name</th>
+            <th>Permission</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% records.forEach(function(record){ %>
+        <tr>
+            <td><%= record.permission_id %></td>
+            <td><%= record.role_id %></td>
+            <td><%= record.page_name %></td>
+            <td><%= record.action_name %></td>
+            <td><%= record.permission %></td>
+        </tr>
+        <% }); %>
+    </tbody>
+</table>

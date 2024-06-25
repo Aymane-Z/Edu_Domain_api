@@ -1,0 +1,28 @@
+
+<div id="report-title"><h1>Encaissement Externe</h1></div>
+<table className="table table-sm table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Banque</th>
+            <th>Reference</th>
+            <th>Nom</th>
+            <th>Prenom</th>
+            <th>Recu</th>
+            <th>Id Encaissement</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% records.forEach(function(record){ %>
+        <tr>
+            <td><%= record.id %></td>
+            <td><%= record.banque %></td>
+            <td><%= record.reference %></td>
+            <td><%= record.nom %></td>
+            <td><%= record.prenom %></td>
+            <td><%= record.recu %></td>
+            <td><%= record.id_encaissement %></td>
+        </tr>
+        <% }); %>
+    </tbody>
+</table>

@@ -1,0 +1,34 @@
+
+<div id="report-title"><h1>Etat Unite</h1></div>
+<table className="table table-sm table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Etat</th>
+            <th>Description</th>
+            <th>Observation</th>
+            <th>Dt Debut Etat</th>
+            <th>Dt Fin Etat</th>
+            <th>Ouvert Location</th>
+            <th>Id Unitelocation</th>
+            <th>Date Created</th>
+            <th>Date Updated</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% records.forEach(function(record){ %>
+        <tr>
+            <td><%= record.id %></td>
+            <td><%= record.etat %></td>
+            <td><%= record.description %></td>
+            <td><%= record.observation %></td>
+            <td><%= record.dt_debut_etat %></td>
+            <td><%= record.dt_fin_etat %></td>
+            <td><%= record.ouvert_location %></td>
+            <td><%= record.id_unitelocation %></td>
+            <td><%= record.date_created %></td>
+            <td><%= record.date_updated %></td>
+        </tr>
+        <% }); %>
+    </tbody>
+</table>

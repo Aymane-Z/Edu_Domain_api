@@ -1,0 +1,110 @@
+
+<div id="report-title"><h1>Demande Logement</h1></div>
+<table className="table table-sm table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Nom</th>
+            <th>Prenom</th>
+            <th>Cin Client</th>
+            <th>Date Naissance</th>
+            <th>Lieu Naissance</th>
+            <th>Situation Familiale</th>
+            <th>Adresse Client</th>
+            <th>Code Postal Client</th>
+            <th>Ville Client</th>
+            <th>Pays Client</th>
+            <th>Tel 1 Client</th>
+            <th>Tel 2 Client</th>
+            <th>Email Client</th>
+            <th>Etablissement</th>
+            <th>Cycle Etudes</th>
+            <th>Nom Garant</th>
+            <th>Prenom Garant</th>
+            <th>Cin Garant</th>
+            <th>Date Naissance Garant</th>
+            <th>Lieu Naissance Garant</th>
+            <th>Situation Familiale Garant</th>
+            <th>Lien Garant Client</th>
+            <th>Adresse Garant</th>
+            <th>Code Postal Garant</th>
+            <th>Ville Garant</th>
+            <th>Pays Garant</th>
+            <th>Tel1 Garant</th>
+            <th>Tel2 Garant</th>
+            <th>Email Garant</th>
+            <th>Profession</th>
+            <th>Tel Bureau</th>
+            <th>Fax</th>
+            <th>Revenus Mensuels</th>
+            <th>Id Unite Location</th>
+            <th>Etat Demande</th>
+            <th>Code Demande</th>
+            <th>Id Dossier</th>
+            <th>Id User</th>
+            <th>Id Client</th>
+            <th>Id Garant</th>
+            <th>Type Chambre</th>
+            <th>Binome Souhaite</th>
+            <th>Cin Binome</th>
+            <th>Date Created</th>
+            <th>Date Updated</th>
+            <th>Id Type Chambre</th>
+            <th>Id Residence</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% records.forEach(function(record){ %>
+        <tr>
+            <td><%= record.id %></td>
+            <td><%= record.nom %></td>
+            <td><%= record.prenom %></td>
+            <td><%= record.cin_client %></td>
+            <td><%= record.date_naissance %></td>
+            <td><%= record.lieu_naissance %></td>
+            <td><%= record.situation_familiale %></td>
+            <td><%= record.adresse_client %></td>
+            <td><%= record.code_postal_client %></td>
+            <td><%= record.ville_client %></td>
+            <td><%= record.pays_client %></td>
+            <td><%= record.tel_1_client %></td>
+            <td><%= record.tel_2_client %></td>
+            <td><%= record.email_client %></td>
+            <td><%= record.etablissement %></td>
+            <td><%= record.cycle_etudes %></td>
+            <td><%= record.nom_garant %></td>
+            <td><%= record.prenom_garant %></td>
+            <td><%= record.cin_garant %></td>
+            <td><%= record.date_naissance_garant %></td>
+            <td><%= record.lieu_naissance_garant %></td>
+            <td><%= record.situation_familiale_garant %></td>
+            <td><%= record.lien_garant_client %></td>
+            <td><%= record.adresse_garant %></td>
+            <td><%= record.code_postal_garant %></td>
+            <td><%= record.ville_garant %></td>
+            <td><%= record.pays_garant %></td>
+            <td><%= record.tel1_garant %></td>
+            <td><%= record.tel2_garant %></td>
+            <td><%= record.email_garant %></td>
+            <td><%= record.profession %></td>
+            <td><%= record.tel_bureau %></td>
+            <td><%= record.fax %></td>
+            <td><%= record.revenus_mensuels %></td>
+            <td><%= record.id_unite_location %></td>
+            <td><%= record.etat_demande %></td>
+            <td><%= record.code_demande %></td>
+            <td><%= record.id_dossier %></td>
+            <td><%= record.id_user %></td>
+            <td><%= record.id_client %></td>
+            <td><%= record.id_garant %></td>
+            <td><%= record.type_chambre %></td>
+            <td><%= record.binome_souhaite %></td>
+            <td><%= record.cin_binome %></td>
+            <td><%= record.date_created %></td>
+            <td><%= record.date_updated %></td>
+            <td><%= record.id_type_chambre %></td>
+            <td><%= record.id_residence %></td>
+        </tr>
+        <% }); %>
+    </tbody>
+</table>

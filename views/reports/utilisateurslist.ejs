@@ -1,0 +1,24 @@
+
+<div id="report-title"><h1>Utilisateurs</h1></div>
+<table className="table table-sm table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Username</th>
+            <th>Email</th>
+            <th>Photo</th>
+            <th>User Role Id</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% records.forEach(function(record){ %>
+        <tr>
+            <td><%= record.id %></td>
+            <td><%= record.username %></td>
+            <td><%= record.email %></td>
+            <td><%= record.photo %></td>
+            <td><%= record.user_role_id %></td>
+        </tr>
+        <% }); %>
+    </tbody>
+</table>

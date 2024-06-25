@@ -1,0 +1,46 @@
+
+<div id="report-title"><h1>Encaissement</h1></div>
+<table className="table table-sm table-striped">
+    <thead>
+        <tr>
+            <th>Designation</th>
+            <th>Date</th>
+            <th>Montant</th>
+            <th>Observation</th>
+            <th>Client</th>
+            <th>User</th>
+            <th>Facture</th>
+            <th>Unite de Location</th>
+            <th>Date Updated</th>
+            <th>Date Created</th>
+            <th>Banque</th>
+            <th>Reference de paiement</th>
+            <th>Nom</th>
+            <th>Prénom</th>
+            <th>Reçu de paiement</th>
+            <th>Status</th>
+        </tr>
+    </thead>
+    <tbody>
+        <% records.forEach(function(record){ %>
+        <tr>
+            <td><%= record.encaissementdetails_designation %></td>
+            <td><%= record.date %></td>
+            <td><%= record.montant %></td>
+            <td><%= record.observation %></td>
+            <td><%= record.id_client %></td>
+            <td><%= record.user_id %></td>
+            <td><%= record.id_facture %></td>
+            <td><%= record.id_unite_location %></td>
+            <td><%= record.date_updated %></td>
+            <td><%= record.date_created %></td>
+            <td><%= record.encaissementdetails_banque %></td>
+            <td><%= record.encaissementdetails_reference %></td>
+            <td><%= record.encaissementdetails_nom %></td>
+            <td><%= record.encaissementdetails_prenom %></td>
+            <td><%= record.encaissementdetails_recu %></td>
+            <td><%= record.status %></td>
+        </tr>
+        <% }); %>
+    </tbody>
+</table>
